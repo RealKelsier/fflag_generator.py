@@ -1,7 +1,6 @@
 import streamlit as st
 import json
 import random
-import pyperclip
 
 # Define FFlag libraries for each performance mode
 FFLAG_LIBRARIES = {
@@ -14,65 +13,65 @@ FFLAG_LIBRARIES = {
         {"DFFlagEnableFastPhysics": "True"},
         {"FFlagReduceTextureResolution": "True"},
         {"DFFlagEnableGPUAcceleration": "True"},
-        {"DFFlagMinimizePostEffects": "True"},
+        {"FFlagMinimizePostEffects": "True"},
         {"FFlagOptimizeMeshLoading": "True"},
-        {"DFFlagEnableParallelRendering": "True"},
-        {"DFFlagReduceAnimationFrames": "True"},
+        {"FFlagEnableParallelRendering": "True"},
+        {"FFlagReduceAnimationFrames": "True"},
         {"FFlagDisableTerrainDetails": "True"},
         {"DFFlagEnableLODSystem": "True"},
-        {"DFFlagOptimizeNetworkReplication": "True"},
-        {"DFFlagReduceShaderComplexity": "True"},
+        {"FFlagOptimizeNetworkReplication": "True"},
+        {"FFlagReduceShaderComplexity": "True"},
         {"FFlagEnableDynamicResolution": "True"},
-        {"DFFlagDisableVolumetricFog": "True"},
-        {"DFFlagOptimizeSoundProcessing": "True"},
-        {"DFFlagEnableFrameBufferOptimization": "True"},
-        {"DFFlagReduceParticleDensity": "True"},
-        {"DFFlagEnableAsyncAssetLoading": "True"},
-        {"DFFlagDisableReflectionProbes": "True"},
-        {"DFFlagOptimizeLightingSystem": "True"},
-        {"DFFlagEnableMinimalUI": "True"},
-        {"DFFlagReduceBloomIntensity": "True"},
-        {"DFFlagDisableDepthOfField": "True"},
-        {"DFFlagOptimizeScriptExecution": "True"},
-        {"DFFlagEnableCullDistance": "True"},
-        {"DFFlagReduceTextureAnisotropy": "True"},
-        {"DFFlagDisableDynamicShadows": "True"},
-        {"DFFlagEnableFastStartup": "True"},
-        {"DFFlagOptimizeMemoryUsage": "True"},
-        {"DFFlagReducePhysicsCalculations": "True"},
-        {"DFFlagEnableStreamedTextures": "True"},
-        {"DFFlagDisableAmbientOcclusion": "True"},
-        {"DFFlagOptimizePathfinding": "True"},
-        {"DFFlagEnableLowResBuffers": "True"},
-        {"DFFlagReduceNetworkPackets": "True"},
-        {"DFFlagEnableTextureCompression": "True"},
-        {"DFFlagDisableLensFlares": "True"},
-        {"DFFlagOptimizeCollisionDetection": "True"},
-        {"DFFlagEnableMinimalPostProcessing": "True"},
-        {"DFFlagReduceSoundChannels": "True"},
-        {"DFFlagEnableEfficientCulling": "True"},
-        {"DFFlagOptimizeRenderPipeline": "True"},
-        {"DFFlagDisableSkybox": "True"},
-        {"DFFlagEnableFastMaterialLoading": "True"},
-        {"DFFlagReduceVertexBuffers": "True"},
+        {"FFlagDisableVolumetricFog": "True"},
+        {"FFlagOptimizeSoundProcessing": "True"},
+        {"FFlagEnableFrameBufferOptimization": "True"},
+        {"FFlagReduceParticleDensity": "True"},
+        {"FFlagEnableAsyncAssetLoading": "True"},
+        {"FFlagDisableReflectionProbes": "True"},
+        {"FFlagOptimizeLightingSystem": "True"},
+        {"FFlagEnableMinimalUI": "True"},
+        {"FFlagReduceBloomIntensity": "True"},
+        {"FFlagDisableDepthOfField": "True"},
+        {"FFlagOptimizeScriptExecution": "True"},
+        {"FFlagEnableCullDistance": "True"},
+        {"FFlagReduceTextureAnisotropy": "True"},
+        {"FFlagDisableDynamicShadows": "True"},
+        {"FFlagEnableFastStartup": "True"},
+        {"FFlagOptimizeMemoryUsage": "True"},
+        {"FFlagReducePhysicsCalculations": "True"},
+        {"FFlagEnableStreamedTextures": "True"},
+        {"FFlagDisableAmbientOcclusion": "True"},
+        {"FFlagOptimizePathfinding": "True"},
+        {"FFlagEnableLowResBuffers": "True"},
+        {"FFlagReduceNetworkPackets": "True"},
+        {"FFlagEnableTextureCompression": "True"},
+        {"FFlagDisableLensFlares": "True"},
+        {"FFlagOptimizeCollisionDetection": "True"},
+        {"FFlagEnableMinimalPostProcessing": "True"},
+        {"FFlagReduceSoundChannels": "True"},
+        {"FFlagEnableEfficientCulling": "True"},
+        {"FFlagOptimizeRenderPipeline": "True"},
+        {"FFlagDisableSkybox": "True"},
+        {"FFlagEnableFastMaterialLoading": "True"},
+        {"FFlagReduceVertexBuffers": "True"},
     ],
     "Low-End Device": [
         {"FFlagGraphicsPerformanceBoost": "True"},
         {"DFFlagEnableAsyncTextureLoading": "True"},
         {"FFlagReduceRenderQuality": "True"},
-        {"DFFlagDisableShadowCasting": "True"},
+        {"FFlagDisableShadowCasting": "True"},
         {"DFFlagEnableMinimalGraphics": "True"},
         {"FFlagDisablePostEffects": "True"},
         {"FFlagReduceTextureResolution": "True"},
-        {"DFFlagDisableVolumetricFog": "True"},
-        {"FFlagEnableLowDetailLOD": "True"},
+        {"FFlagDisableVolumetricFog": "True"},
+        {"DFFlagEnableLowDetailLOD": "True"},
         {"FFlagDisableTerrainDetails": "True"},
-        {"DFFlagReduceParticleEffects": "True"},
-        {"DFFlagEnableSimpleShaders": "True"},
+        {"FFlagReduceParticleEffects": "True"},
+        {"FFlagEnableSimpleShaders": "True"},
         {"FFlagDisableDynamicLighting": "True"},
         {"FFlagReduceAnimationFrames": "True"},
         {"FFlagEnableTextureCompression": "True"},
-        {"DFFlagDisableReflectionProbes": "True"},
+        {"FFlagDisableReflectionProbes": "True"},
         {"FFlagOptimizeMemoryUsage": "True"},
         {"FFlagReducePhysicsCalculations": "True"},
         {"FFlagEnableLowResBuffers": "True"},
@@ -111,10 +110,10 @@ FFLAG_LIBRARIES = {
         {"DFFlagEnableAsyncTextureLoading": "True"},
         {"FFlagOptimizeParticleSystems": "True"},
         {"FFlagReduceRenderQuality": "True"},
-        {"FFlagEnableFastPhysics": "True"},
+        {"DFFlagEnableFastPhysics": "True"},
         {"FFlagEnableParallelRendering": "True"},
         {"FFlagReduceAnimationFrames": "True"},
-        {"FFlagEnableLODSystem": "True"},
+        {"DFFlagEnableLODSystem": "True"},
         {"FFlagOptimizeNetworkReplication": "True"},
         {"FFlagReduceShaderComplexity": "True"},
         {"FFlagEnableDynamicResolution": "True"},
@@ -184,7 +183,7 @@ FFLAG_LIBRARIES = {
         {"FFlagGraphicsPerformanceBoost": "True"},
         {"DFFlagEnableAsyncTextureLoading": "True"},
         {"FFlagReduceShaderComplexity": "True"},
-        {"FFlagEnableLODSystem": "True"},
+        {"DFFlagEnableLODSystem": "True"},
         {"FFlagOptimizeLightingSystem": "True"},
         {"FFlagReduceBloomIntensity": "True"},
         {"FFlagDisableVolumetricFog": "True"},
@@ -199,7 +198,7 @@ FFLAG_LIBRARIES = {
         {"FFlagOptimizeMeshLoading": "True"},
         {"FFlagEnableParallelRendering": "True"},
         {"FFlagReduceRenderQuality": "True"},
-        {"FFlagEnableFastPhysics": "True"},
+        {"DFFlagEnableFastPhysics": "True"},
         {"FFlagReduceTextureResolution": "True"},
         {"FFlagDisableTerrainDetails": "True"},
         {"FFlagDisableSkybox": "True"},
@@ -216,7 +215,7 @@ FFLAG_LIBRARIES = {
         {"FFlagEnableLowResBuffers": "True"},
         {"FFlagGraphicsPerformanceBoost": "True"},
         {"FFlagReduceRenderQuality": "True"},
-        {"FFlagEnableLODSystem": "True"},
+        {"DFFlagEnableLODSystem": "True"},
         {"FFlagOptimizeNetworkReplication": "True"},
         {"FFlagReduceShaderComplexity": "True"},
         {"FFlagEnableDynamicResolution": "True"},
@@ -252,21 +251,21 @@ FFLAG_LIBRARIES = {
         {"FFlagReduceAnimationFrames": "True"},
         {"FFlagDisableTerrainDetails": "True"},
         {"FFlagOptimizeParticleSystems": "True"},
-        {"FFlagEnableFastPhysics": "True"},
+        {"DFFlagEnableFastPhysics": "True"},
     ],
     "Balanced Mode": [
         {"FFlagGraphicsPerformanceBoost": "True"},
         {"DFFlagEnableAsyncTextureLoading": "True"},
         {"FFlagReduceRenderQuality": "True"},
         {"FFlagOptimizeParticleSystems": "True"},
-        {"FFlagEnableFastPhysics": "True"},
+        {"DFFlagEnableFastPhysics": "True"},
         {"FFlagReduceTextureResolution": "True"},
         {"FFlagEnableGPUAcceleration": "True"},
         {"FFlagMinimizePostEffects": "True"},
         {"FFlagOptimizeMeshLoading": "True"},
         {"FFlagEnableParallelRendering": "True"},
         {"FFlagReduceAnimationFrames": "True"},
-        {"FFlagEnableLODSystem": "True"},
+        {"DFFlagEnableLODSystem": "True"},
         {"FFlagOptimizeNetworkReplication": "True"},
         {"FFlagReduceShaderComplexity": "True"},
         {"FFlagEnableDynamicResolution": "True"},
@@ -332,7 +331,7 @@ FFLAG_LIBRARIES = {
         {"FFlagGraphicsPerformanceBoost": "True"},
         {"DFFlagEnableAsyncTextureLoading": "True"},
         {"FFlagReduceShaderComplexity": "True"},
-        {"FFlagEnableLODSystem": "True"},
+        {"DFFlagEnableLODSystem": "True"},
         {"FFlagOptimizeLightingSystem": "True"},
         {"FFlagReduceBloomIntensity": "True"},
         {"FFlagDisableVolumetricFog": "True"},
@@ -347,7 +346,7 @@ FFLAG_LIBRARIES = {
         {"FFlagOptimizeMeshLoading": "True"},
         {"FFlagEnableParallelRendering": "True"},
         {"FFlagReduceRenderQuality": "True"},
-        {"FFlagEnableFastPhysics": "True"},
+        {"DFFlagEnableFastPhysics": "True"},
         {"FFlagReduceTextureResolution": "True"},
         {"FFlagDisableTerrainDetails": "True"},
         {"FFlagDisableSkybox": "True"},
@@ -447,27 +446,33 @@ if st.button("Generate FFlags"):
     # Convert to formatted JSON
     formatted_json = json.dumps(combined_fflags, indent=2)
     
-    # Store in session state for copying
+    # Store in session state for downloading
     st.session_state["generated_fflags"] = formatted_json
     
     # Display formatted JSON
     st.markdown("### Generated FFlags")
     st.code(formatted_json, language="json")
     
-    # Copy to Clipboard button
-    if st.button("Copy to Clipboard"):
-        pyperclip.copy(formatted_json)
-        st.success("FFlags copied to clipboard!")
+    # Download button for JSON
+    st.download_button(
+        label="Download FFlags",
+        data=formatted_json,
+        file_name="fflags.json",
+        mime="application/json"
+    )
 
 # Display previously generated FFlags if they exist
 elif "generated_fflags" in st.session_state:
     st.markdown("### Generated FFlags")
     st.code(st.session_state["generated_fflags"], language="json")
     
-    # Copy to Clipboard button
-    if st.button("Copy to Clipboard"):
-        pyperclip.copy(st.session_state["generated_fflags"])
-        st.success("FFlags copied to clipboard!")
+    # Download button for JSON
+    st.download_button(
+        label="Download FFlags",
+        data=st.session_state["generated_fflags"],
+        file_name="fflags.json",
+        mime="application/json"
+    )
 
 # Footer
 st.markdown('<div class="footer">Made by KELSIER 🗡️</div>', unsafe_allow_html=True)
