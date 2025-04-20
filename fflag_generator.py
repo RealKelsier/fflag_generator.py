@@ -475,4 +475,4 @@ elif "generated_fflags" in st.session_state:
     )
 
 # Footer
-st.markdown('<div class="footer">Made by KELSIER 🗡️</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Made by KELSIER 🗡️(kelsier_69 on discord)</div>', unsafe_allow_html=True)
